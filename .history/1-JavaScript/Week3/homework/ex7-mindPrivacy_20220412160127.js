@@ -33,40 +33,36 @@ function filterPrivateData(employeeRecordsArr) {
     // TODO complete this function
     if (employeeRecordsArr !== undefined) {
         const employeePublicData = [];
-        for (const employeeData of employeeRecordsArr) {
-            const { name, occupation, email } = employeeData;
-            employeePublicData.push({ name, occupation, email });
+        for (let employeeData of employeeRecordsArr) {
+            let { name, occupation, email } = employeeData;
         }
-        return employeePublicData;
-    }
-}
 
-// ! Test functions (plain vanilla JavaScript)
-function test1() {
-    console.log('Test 1: filterPrivateData should take one parameters');
-    console.assert(filterPrivateData.length === 1);
-}
+        // ! Test functions (plain vanilla JavaScript)
+        function test1() {
+            console.log('Test 1: filterPrivateData should take one parameters');
+            console.assert(filterPrivateData.length === 1);
+        }
 
-function test2() {
-    console.log('Test 2: gender and salary should be filtered out');
-    const expected = [{
-            name: 'John',
-            occupation: 'developer',
-            email: 'john.doe@somewhere.net',
-        },
-        {
-            name: 'Jane',
-            occupation: 'manager',
-            email: 'jane.eyre@somewhere.net',
-        },
-    ];
-    const result = filterPrivateData(employeeRecords);
-    console.assert(JSON.stringify(result) === JSON.stringify(expected));
-}
+        function test2() {
+            console.log('Test 2: gender and salary should be filtered out');
+            const expected = [{
+                    name: 'John',
+                    occupation: 'developer',
+                    email: 'john.doe@somewhere.net',
+                },
+                {
+                    name: 'Jane',
+                    occupation: 'manager',
+                    email: 'jane.eyre@somewhere.net',
+                },
+            ];
+            const result = filterPrivateData(employeeRecords);
+            console.assert(JSON.stringify(result) === JSON.stringify(expected));
+        }
 
-function test() {
-    test1();
-    test2();
-}
+        function test() {
+            test1();
+            test2();
+        }
 
-test();
+        test();

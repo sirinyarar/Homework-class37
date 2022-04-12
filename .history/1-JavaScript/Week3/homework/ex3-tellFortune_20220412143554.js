@@ -35,37 +35,32 @@ body, this code is now written once only in a separated function.
 // a randomly selected element as its return value.
 function selectRandomly(items) {
     // TODO complete this function
-    return items[Math.floor(Math.random() * items.length)];
-}
-
-function tellFortune(numKids, partnerNames, locations, jobTitles) {
-    // TODO complete this function
-    const numKid = selectRandomly(numKids)
-    const partnerName = selectRandomly(partnerNames)
-    const location = selectRandomly(locations)
-    const jobTitle = selectRandomly(jobTitles)
+    let items = jobTitles[Math.floor(Math.random() * items.length)];
 
 
-    return `You will be ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`
-}
+    function tellFortune(randomJob, randomLocation, randomPartner, randomKidNum) {
+        // TODO complete this function
+        return `You will be a ${randomJob} in ${randomLocation}, 
+  married to ${randomPartner} with ${randomKidNum} kids.`
+    }
 
-function main() {
+    function main() {
 
-    const numKids = [1, 2, 3, 4, 5];
+        const numKids = [1, 2, 3, 4, 5];
 
-    const partnerNames = ['Jack', 'Maria', 'Simon', 'John', 'Sara'];
+        const partnerNames = ['Jack', 'Maria', 'Simon', 'John', 'Sara'];
 
-    const locations = ['Amsterdam', 'Istanbul', 'Paris', 'Milan', 'Florida'];
+        const locations = ['Amsterdam', 'Istanbul', 'Paris', 'Milan', 'Florida'];
 
-    const jobTitles = ['Web developer', 'Pilot', 'Doctor', 'Musician', 'Actor'];
+        const jobTitles = ['Web developer', 'Pilot', 'Doctor', 'Musician', 'Actor'];
 
-    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
-    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
-    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
-}
+        console.log(tellFortune(jobTitles, locations, partnerNames, numKids));
+        console.log(tellFortune(jobTitles, locations, partnerNames, numKids));
+        console.log(tellFortune(jobTitles, locations, partnerNames, numKids));
+    }
 
-// ! Do not change or remove the code below
-if (process.env.NODE_ENV !== 'test') {
-    main();
-}
-module.exports = tellFortune;
+    // ! Do not change or remove the code below
+    if (process.env.NODE_ENV !== 'test') {
+        main();
+    }
+    module.exports = tellFortune;

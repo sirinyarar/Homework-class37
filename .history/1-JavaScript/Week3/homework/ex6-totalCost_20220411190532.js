@@ -22,33 +22,30 @@ instead!
 -----------------------------------------------------------------------------*/
 const cartForParty = {
     // TODO complete this object
-    chips: 2.50,
-    juice: 3.80,
-    eggs: 4.20,
-    yoghurt: 2.75,
-    bread: 1.50
+    chips: 2.5,
+    juice: 3,
+    eggs: 4,
+    yoghurt: 2,
+    bread: 1.5
 };
 
-function calculateTotalPrice(total) {
+function calculateTotalPrice(addPrices) {
     // TODO replace this comment with your code
-    let calculateTotalPrice = 0;
-    for (const item in total) {
-        calculateTotalPrice += parseFloat(total[item]);
+    for (const grocery in cartForParty) {
+        return chips + juice + eggs + yoghurt + bread
     }
-    return `Total: € ${calculateTotalPrice}`
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
-    console.log('\nTest 1: calculateTotalPrice should take one parameter');
+    console.log("Total: " + "€ " + calculateTotalPrice);
     // TODO replace this comment with your code
-    console.assert(calculateTotalPrice.length === 1);
+
 }
 
 function test2() {
     console.log('\nTest 2: return correct output when passed cartForParty');
-
-    console.assert(calculateTotalPrice.length === 1);
+    // TODO replace this comment with your code
 }
 
 function test() {

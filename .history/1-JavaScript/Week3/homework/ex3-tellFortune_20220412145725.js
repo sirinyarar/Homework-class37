@@ -36,36 +36,37 @@ body, this code is now written once only in a separated function.
 function selectRandomly(items) {
     // TODO complete this function
     return items[Math.floor(Math.random() * items.length)];
-}
-
-function tellFortune(numKids, partnerNames, locations, jobTitles) {
-    // TODO complete this function
-    const numKid = selectRandomly(numKids)
-    const partnerName = selectRandomly(partnerNames)
-    const location = selectRandomly(locations)
-    const jobTitle = selectRandomly(jobTitles)
 
 
-    return `You will be ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`
-}
+    function tellFortune(numKids, partnerNames, locations, jobTitles) {
+        // TODO complete this function
+        const randomKidNum = selectRandomly(numKids)
+        const randomPartner = selectRandomly(partnerNames)
+        const randomLocation = selectRandomly(locations)
+        const randomJob = selectRandomly(jobTitles)
 
-function main() {
 
-    const numKids = [1, 2, 3, 4, 5];
+        return `You will be a ${randomJob} in ${randomLocation}, 
+  married to ${randomPartner} with ${randomKidNum} kids.`
+    }
 
-    const partnerNames = ['Jack', 'Maria', 'Simon', 'John', 'Sara'];
+    function main() {
 
-    const locations = ['Amsterdam', 'Istanbul', 'Paris', 'Milan', 'Florida'];
+        const numKids = [1, 2, 3, 4, 5];
 
-    const jobTitles = ['Web developer', 'Pilot', 'Doctor', 'Musician', 'Actor'];
+        const partnerNames = ['Jack', 'Maria', 'Simon', 'John', 'Sara'];
 
-    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
-    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
-    console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
-}
+        const locations = ['Amsterdam', 'Istanbul', 'Paris', 'Milan', 'Florida'];
 
-// ! Do not change or remove the code below
-if (process.env.NODE_ENV !== 'test') {
-    main();
-}
-module.exports = tellFortune;
+        const jobTitles = ['Web developer', 'Pilot', 'Doctor', 'Musician', 'Actor'];
+
+        console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+        console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+        console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+    }
+
+    // ! Do not change or remove the code below
+    if (process.env.NODE_ENV !== 'test') {
+        main();
+    }
+    module.exports = tellFortune;

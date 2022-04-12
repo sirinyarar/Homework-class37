@@ -40,15 +40,14 @@ function calculateTotalPrice(total) {
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
-    console.log('\nTest 1: calculateTotalPrice should take one parameter');
+    console.log("Total: " + "€ " + calculateTotalPrice);
     // TODO replace this comment with your code
-    console.assert(calculateTotalPrice.length === 1);
+
 }
 
 function test2() {
     console.log('\nTest 2: return correct output when passed cartForParty');
-
-    console.assert(calculateTotalPrice.length === 1);
+    // TODO replace this comment with your code
 }
 
 function test() {

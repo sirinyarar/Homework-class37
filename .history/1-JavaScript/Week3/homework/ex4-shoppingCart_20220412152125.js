@@ -26,14 +26,10 @@ const shoppingCart = ['bananas', 'milk'];
 function addToShoppingCart(item) {
     // TODO complete this function
 
-    if (shoppingCart.length === 2) {
-        shoppingCart.push(item);
-        if (shoppingCart[2] === undefined) {
-            shoppingCart.pop()
-        }
-    } else if (shoppingCart.length === 3) {
+    if (shoppingCart.length > 3) {
         shoppingCart.shift();
-        shoppingCart.push(item);
+    } else {
+        shoppingCart.push();
     }
     return `You bought ${shoppingCart.join(", ")}!`
 }

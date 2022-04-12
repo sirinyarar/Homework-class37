@@ -18,7 +18,7 @@ it pure. Do the following:
 // ! Function under test
 function addToShoppingCart(initialCart, item) {
     // TODO complete this function
-    const newCart = [...initialCart, item]
+    const newCart = = [...initialCart, item]
 
     if (newCart.length > 3) {
         return newCart.slice(newCart.length - 3)

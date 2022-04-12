@@ -33,8 +33,8 @@ function filterPrivateData(employeeRecordsArr) {
     // TODO complete this function
     if (employeeRecordsArr !== undefined) {
         const employeePublicData = [];
-        for (const employeeData of employeeRecordsArr) {
-            const { name, occupation, email } = employeeData;
+        for (let employeeData of employeeRecordsArr) {
+            let { name, occupation, email } = employeeData;
             employeePublicData.push({ name, occupation, email });
         }
         return employeePublicData;
