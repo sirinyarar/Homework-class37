@@ -62,7 +62,7 @@ function main() {
     ];
 
     const jobTitles = [
-        "Pilot", "Doctor", "Musician", "Footballer", "Web Developer"
+        "Pilot", "Doctor", "Musician", "Footballer", "Sofware Developer"
     ];
 
     console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

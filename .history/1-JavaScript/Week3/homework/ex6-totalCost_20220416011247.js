@@ -23,7 +23,7 @@ instead!
 const cartForParty = {
     juice: 1.75,
     eggs: 4.25,
-    yoghurt: 2.75,
+    yoghurt: 2.50,
     orange: 2.25,
     cookies: 3.75
 };
@@ -49,7 +49,7 @@ function test1() {
 
 function test2() {
     console.log('\nTest 2: return correct output when passed cartForParty');
-    const expected = 'Total: € 14.75';
+    const expected = 'Total: € 15.00';
     const actual = calculateTotalPrice(cartForParty);
     console.assert(actual === expected);
 }

@@ -49,7 +49,7 @@ function test1() {
 
 function test2() {
     console.log('\nTest 2: return correct output when passed cartForParty');
-    const expected = 'Total: € 14.75';
+    const expected = 'Total: € 14.50';
     const actual = calculateTotalPrice(cartForParty);
     console.assert(actual === expected);
 }
